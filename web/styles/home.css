@@ -3,21 +3,86 @@
 /*}*/
 
 .hero {
-    min-height: calc(100dvh);
+    position: relative;
+    min-height: 100dvh;
     display: flex;
     align-items: center;
+    background-image: url("https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1920&q=75");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #ffffff;
+}
+
+.hero::before,
+.hero::after {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    content: "";
+}
+
+.hero::before {
+    background: rgba(98, 71, 136, 0.88);
+    clip-path: polygon(0 0, 58% 0, 32% 100%, 0 100%);
+}
+
+.hero::after {
+    background: rgba(221, 151, 7, 0.82);
+    clip-path: polygon(100% 0, 100% 100%, 42% 100%, 68% 0);
+}
+
+.hero .wrap {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    width: 100%;
+    max-width: var(--wrap);
+    padding-inline: var(--gutter);
+    transform: translate(-50%, -50%);
+}
+
+@supports (animation-timeline: scroll()) {
+    .hero .wrap {
+        animation: hero-fade linear both;
+        animation-timeline: scroll(root block);
+        animation-range: 0 100vh;
+    }
+
+    @keyframes hero-fade {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+}
+
+.hero h1 {
+    color: #ffffff;
 }
 
 .hero__lede {
     margin-top: 1.25rem;
-    color: var(--ink-soft);
+    color: rgba(255, 255, 255, 0.92);
     font-size: var(--fs-500);
     font-weight: 500;
 }
 
 .hero__body {
     margin-top: 1rem;
-    color: var(--slate);
+    color: rgba(255, 255, 255, 0.78);
+}
+
+.hero .btn--secondary {
+    color: #ffffff;
+}
+
+.hero .btn--secondary:hover {
+    color: var(--ink);
 }
 
 .hero__actions {
@@ -26,6 +91,27 @@
     gap: 1rem;
     max-width: none;
     margin-top: 2.5rem;
+}
+
+@media (max-width: 30rem) {
+    .hero__actions {
+        flex-wrap: nowrap;
+        gap: 0.6rem;
+    }
+
+    .hero__actions .btn {
+        flex: 1 1 0;
+        min-height: 2.75rem;
+        padding-inline: 0.75rem;
+        font-size: var(--fs-300);
+        white-space: nowrap;
+    }
+}
+
+.services {
+    position: relative;
+    z-index: 1;
+    background: var(--paper);
 }
 
 .services__list {
@@ -50,6 +136,8 @@
 }
 
 .stats {
+    position: relative;
+    z-index: 1;
     background: var(--surface);
     border-block: 1px solid var(--line);
     text-align: center;
