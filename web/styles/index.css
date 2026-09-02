@@ -138,6 +138,10 @@ strong {
     padding-block: var(--section-y);
 }
 
+.section h2 {
+    text-align: center;
+}
+
 :focus-visible {
     outline: 2px solid var(--gold);
     outline-offset: 3px;
@@ -194,3 +198,14 @@ strong {
     background: var(--gold);
     color: var(--ink);
 }
+
+/*@media (prefers-reduced-motion: reduce) {*/
+/*    *,*/
+/*    *::before,*/
+/*    *::after {*/
+/*        scroll-behavior: auto !important;*/
+/*        transition-duration: 0.01ms !important;*/
+/*        animation-duration: 0.01ms !important;*/
+/*        animation-iteration-count: 1 !important;*/
+/*    }*/
+/*}*/

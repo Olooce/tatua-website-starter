@@ -1,3 +1,87 @@
+.page-banner {
+    position: relative;
+    overflow: hidden;
+    background-image: url("https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=70");
+    background-position: center;
+    background-size: cover;
+    color: #ffffff;
+}
+
+.page-banner::before,
+.page-banner::after {
+    position: absolute;
+    inset: 0;
+    content: "";
+}
+
+.page-banner::before {
+    background: rgba(98, 71, 136, 0.88);
+    clip-path: polygon(0 0, 58% 0, 32% 100%, 0 100%);
+}
+
+.page-banner::after {
+    background: rgba(221, 151, 7, 0.82);
+    clip-path: polygon(100% 0, 100% 100%, 42% 100%, 68% 0);
+}
+
+.page-banner__inner {
+    position: relative;
+    z-index: 1;
+    padding-block: clamp(3rem, 8vw, 5rem);
+    text-align: center;
+}
+
+.page-banner h1 {
+    color: #ffffff;
+}
+
+.page-banner__lede {
+    max-width: 40rem;
+    margin: 1rem auto 0;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.breadcrumb {
+    margin-top: 1.75rem;
+    font-size: var(--fs-300);
+}
+
+.breadcrumb ol {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.35rem;
+}
+
+.breadcrumb li {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.breadcrumb a {
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration-color: rgba(255, 255, 255, 0.4);
+    text-underline-offset: 0.2em;
+}
+
+.breadcrumb a:hover {
+    color: #ffffff;
+    text-decoration-color: #ffffff;
+}
+
+.breadcrumb li[aria-current="page"] {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.breadcrumb li:not(:last-child)::after {
+    content: "\203A";
+    color: var(--gold-light);
+}
+
+
 .site-header {
     position: sticky;
     top: 0;
@@ -186,7 +270,7 @@
 
     .site-nav a[aria-current="page"] {
         border-bottom: none;
-        border-left: 3px solid var(--accent);
+        /*border-left: 3px solid var(--accent);*/
         padding-left: 0.75rem;
     }
 
