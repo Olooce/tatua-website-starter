@@ -2,9 +2,354 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Contact Us - Tatua Solutions</title>
+    <meta content="Get in touch with Tatua's team. Start your free trial or schedule a demo to see how we can transform your support
+operations."
+          name="description">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="/assets/tatua-favicon.png" rel="icon" type="image/png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link href="/web/styles/index.css" rel="stylesheet">
+    <link href="/web/styles/layout.css" rel="stylesheet">
+    <link href="/web/styles/about.css" rel="stylesheet">
+    <link href="/web/styles/contact.css" rel="stylesheet">
 </head>
 <body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+    <div class="wrap">
+        <a aria-label="Tatua home" class="site-header__logo" href="/index.html">
+            <img alt="Tatua" height="90" src="/assets/tatua-logo.png" width="313">
+        </a>
+        <input aria-label="Toggle navigation menu" class="nav-toggle" id="nav-toggle" type="checkbox">
+        <label class="nav-toggle-label" for="nav-toggle"><span></span></label>
+        <nav aria-label="Main navigation" class="site-nav">
+            <ul class="site-nav__list">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/web/pages/about.html">About</a></li>
+                <li><a aria-current="page" href="/web/pages/contact.html">Contact</a></li>
+                <li><a href="/web/pages/case-studies.html">Case Studies</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="page-banner">
+    <div class="wrap page-banner__inner">
+        <h1>Contact Us</h1>
+        <p class="page-banner__lede">Get in touch with Tatua's team. Start your free trial or schedule a demo to see how
+            we can transform your support
+            operations.</p>
+        <nav aria-label="Breadcrumb" class="breadcrumb">
+            <ol>
+                <li><a href="/index.html">Home</a></li>
+                <li aria-current="page">Contact</li>
+            </ol>
+        </nav>
+    </div>
+</section>
+
+<main id="main">
+    <section aria-labelledby="contact-info-heading" class="section contact__section">
+        <div class="wrap">
+            <h2 id="contact-info-heading">Contact Information</h2>
+            <div class="contact-info__grid">
+                <div class="contact-info__card">
+                    <div class="contact-info__icon"><i aria-hidden="true" class="fa-solid fa-building"></i></div>
+                    <h3>Company</h3>
+                    <address>
+                        <strong>Tatua Solutions Inc.</strong><br>
+                        123 Innovation Drive, Suite 400<br>
+                        San Francisco, CA 94105
+                    </address>
+                </div>
+
+                <div class="contact-info__card">
+                    <div class="contact-info__icon"><i aria-hidden="true" class="fa-solid fa-phone"></i></div>
+                    <h3>Phone Numbers</h3>
+                    <dl>
+                        <dt>Main</dt>
+                        <dd><a href="tel:+15551234567">+1 (555) 123-4567</a></dd>
+                        <dt>Sales</dt>
+                        <dd><a href="tel:+15551234568">+1 (555) 123-4568</a></dd>
+                        <dt>Support</dt>
+                        <dd><a href="tel:+15551234569">+1 (555) 123-4569</a></dd>
+                    </dl>
+                </div>
+
+                <div class="contact-info__card">
+                    <div class="contact-info__icon"><i aria-hidden="true" class="fa-solid fa-envelope"></i></div>
+                    <h3>Email Addresses</h3>
+                    <dl>
+                        <dt>General Inquiries</dt>
+                        <dd><a href="mailto:hello@tatua.com">hello@tatua.com</a></dd>
+                        <dt>Sales</dt>
+                        <dd><a href="mailto:sales@tatua.com">sales@tatua.com</a></dd>
+                        <dt>Support</dt>
+                        <dd><a href="mailto:support@tatua.com">support@tatua.com</a></dd>
+                        <dt>Partnerships</dt>
+                        <dd><a href="mailto:partners@tatua.com">partners@tatua.com</a></dd>
+                    </dl>
+                </div>
+
+                <div class="contact-info__card">
+                    <div class="contact-info__icon"><i aria-hidden="true" class="fa-solid fa-clock"></i></div>
+                    <h3>Business Hours</h3>
+                    <dl>
+                        <dt>Monday - Friday</dt>
+                        <dd>8:00 AM - 6:00 PM PST</dd>
+                        <dt>Saturday</dt>
+                        <dd>10:00 AM - 2:00 PM PST</dd>
+                        <dt>Sunday</dt>
+                        <dd>Closed</dd>
+                    </dl>
+                    <p class="contact-info__emergency">
+                        <i aria-hidden="true" class="fa-solid fa-circle-exclamation"></i>
+                        24/7 emergency support available for Enterprise customers
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section aria-labelledby="form-heading" class="section contact__section">
+        <div class="wrap">
+            <h2 id="form-heading">Send Us a Message</h2>
+            <p class="contact-form__note">Fields marked with <span aria-hidden="true">*</span><span class="sr-only">(required)</span>
+                are required.</p>
+
+            <form action="#" class="contact-form" method="post">
+                <fieldset>
+                    <legend>Contact Information</legend>
+
+                    <div class="form-field">
+                        <label for="full-name">Full Name <span aria-hidden="true">*</span></label>
+                        <input autocomplete="name" id="full-name" maxlength="50" minlength="2" name="full-name"
+                               placeholder="Enter your full name" required type="text">
+                    </div>
+
+                    <div class="form-field">
+                        <label for="email">Email Address <span aria-hidden="true">*</span></label>
+                        <input autocomplete="email" id="email" name="email" placeholder="you@company.com" required
+                               type="email">
+                    </div>
+
+                    <div class="form-field">
+                        <label for="company">Company Name <span aria-hidden="true">*</span></label>
+                        <input autocomplete="organization" id="company" maxlength="100" minlength="2" name="company"
+                               placeholder="Your company name" required type="text">
+                    </div>
+
+                    <div class="form-field">
+                        <label for="phone">Phone Number</label>
+                        <input autocomplete="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                               placeholder="123-456-7890" title="Format: 123-456-7890" type="tel">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Tell us about your needs</legend>
+
+                    <div class="form-field">
+                        <label for="inquiry-type">Inquiry Type <span aria-hidden="true">*</span></label>
+                        <select id="inquiry-type" name="inquiry-type" required>
+                            <option disabled selected value="">Please select...</option>
+                            <option value="sales">Sales Inquiry</option>
+                            <option value="technical-support">Technical Support</option>
+                            <option value="partnership">Partnership Opportunity</option>
+                            <option value="general">General Question</option>
+                            <option value="demo">Demo Request</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="company-size">Company Size <span aria-hidden="true">*</span></label>
+                        <select id="company-size" name="company-size" required>
+                            <option disabled selected value="">Please select...</option>
+                            <option value="1-10">1-10 employees</option>
+                            <option value="11-50">11-50 employees</option>
+                            <option value="51-200">51-200 employees</option>
+                            <option value="201-1000">201-1000 employees</option>
+                            <option value="1000+">1000+ employees</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="current-system">Current Ticketing System</label>
+                        <select id="current-system" name="current-system">
+                            <option value="none">None currently</option>
+                            <option value="zendesk">Zendesk</option>
+                            <option value="servicenow">ServiceNow</option>
+                            <option value="freshdesk">Freshdesk</option>
+                            <option value="jira-service-management">Jira Service Management</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="budget">Budget Range</label>
+                        <select id="budget" name="budget">
+                            <option value="under-1000">Under $1,000/month</option>
+                            <option value="1000-5000">$1,000 - $5,000/month</option>
+                            <option value="5000-15000">$5,000 - $15,000/month</option>
+                            <option value="15000-plus">$15,000+/month</option>
+                            <option value="enterprise">Enterprise (custom pricing)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="timeline">Implementation Timeline</label>
+                        <select id="timeline" name="timeline">
+                            <option value="immediate">Immediate (within 1 month)</option>
+                            <option value="1-3-months">1-3 months</option>
+                            <option value="3-6-months">3-6 months</option>
+                            <option value="6-plus-months">6+ months</option>
+                            <option value="exploring">Just exploring options</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field form-field--full">
+                        <label for="message">Message <span aria-hidden="true">*</span></label>
+                        <textarea id="message" maxlength="500" minlength="10" name="message"
+                                  placeholder="Tell us about your current challenges and what you're looking for in a ticketing solution..."
+                                  required rows="5"></textarea>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Communication Preferences</legend>
+
+                    <fieldset class="contact-form__subgroup">
+                        <legend>Preferred Contact Method <span aria-hidden="true">*</span></legend>
+                        <div class="radio-group">
+                            <label><input name="contact-method" required type="radio" value="email"> Email</label>
+                            <label><input name="contact-method" required type="radio" value="phone"> Phone</label>
+                            <label><input name="contact-method" required type="radio" value="video-call"> Video
+                                Call</label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="contact-form__subgroup">
+                        <legend>Best Time to Contact</legend>
+                        <div class="radio-group">
+                            <label><input name="best-time" type="radio" value="morning"> Morning (9 AM - 12 PM
+                                PST)</label>
+                            <label><input name="best-time" type="radio" value="afternoon"> Afternoon (12 PM - 5 PM PST)</label>
+                            <label><input name="best-time" type="radio" value="evening"> Evening (5 PM - 8 PM
+                                PST)</label>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-field form-field--checkbox">
+                        <label><input name="newsletter" type="checkbox" value="yes"> Yes, I'd like to receive
+                            product updates and industry insights</label>
+                    </div>
+
+                    <div class="form-field form-field--checkbox">
+                        <label><input name="terms" required type="checkbox" value="agreed"> I agree to the Terms
+                            of Service and Privacy Policy <span aria-hidden="true">*</span></label>
+                    </div>
+                </fieldset>
+
+                <div class="form-actions">
+                    <button class="btn btn--secondary" type="reset">Clear Form</button>
+                    <button class="btn btn--primary" type="submit">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section aria-labelledby="offices-heading" class="section contact__section">
+        <div class="wrap">
+            <h2 id="offices-heading">Visit Our Offices</h2>
+            <ul class="offices__list">
+                <li>
+                    <article class="office-card">
+                        <h3>San Francisco Headquarters</h3>
+                        <address>
+                            123 Innovation Drive, Suite 400<br>
+                            San Francisco, CA 94105<br>
+                            <a href="tel:+15551234567">+1 (555) 123-4567</a>
+                        </address>
+                        <iframe class="office-card__map"
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                src="https://maps.google.com/maps?q=123+Innovation+Drive+Suite+400+San+Francisco+CA+94105&z=15&output=embed"
+                                title="Map showing San Francisco Headquarters location"></iframe>
+                    </article>
+                </li>
+                <li>
+                    <article class="office-card">
+                        <h3>New York Office</h3>
+                        <address>
+                            456 Business Plaza, Floor 12<br>
+                            New York, NY 10001<br>
+                            <a href="tel:+15551234570">+1 (555) 123-4570</a>
+                        </address>
+                        <iframe class="office-card__map"
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                src="https://maps.google.com/maps?q=456+Business+Plaza+New+York+NY+10001&z=15&output=embed"
+                                title="Map showing New York Office location"></iframe>
+                    </article>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section aria-labelledby="quick-actions-heading" class="section contact__section">
+        <div class="wrap">
+            <h2 id="quick-actions-heading">Quick Actions</h2>
+            <ul class="quick-actions__list">
+                <li>
+                    <a class="quick-action quick-action--primary" href="#form-heading">
+                        <h3>Start Free Trial</h3>
+                        <p>Get up and running in minutes with our 14-day free trial</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="quick-action quick-action--secondary" href="#form-heading">
+                        <h3>Schedule Demo</h3>
+                        <p>See Tatua in action with a personalized 30-minute demo</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="quick-action quick-action--secondary" href="/web/pages/case-studies.html">
+                        <h3>Download Resources</h3>
+                        <p>Access our implementation guide and best practices documentation</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+</main>
+
+
+<footer class="site-footer">
+    <div class="wrap">
+        <section aria-labelledby="company-information-heading" class="site-footer__brand">
+            <span class="site-footer__logo"><img alt="Tatua" height="128" src="/assets/tatua-icon-white.png"
+                                                 width="128"></span>
+            <h2 id="company-information-heading">Tatua Solutions Inc.</h2>
+            <p class="site-footer__legal">&copy; 2025 Tatua Solutions Inc.</p>
+        </section>
+        <address>
+            <p><i aria-hidden="true" class="fa-solid fa-envelope"></i> <a
+                    href="mailto:hello@tatua.com">hello@tatua.com</a></p>
+            <p><i aria-hidden="true" class="fa-solid fa-phone"></i> <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+        </address>
+        <address>
+            <p>
+                <i aria-hidden="true" class="fa-solid fa-location-dot"></i>
+                <span>123 Innovation Drive,<br>
+                Suite 400,<br>
+                San Francisco, CA 94105</span>
+            </p>
+        </address>
+    </div>
+</footer>
 
 </body>
 </html>
