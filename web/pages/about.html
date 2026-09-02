@@ -7,6 +7,7 @@
           name="description">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <link href="/assets/tatua-favicon.png" rel="icon" type="image/png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
     <link href="/web/styles/index.css" rel="stylesheet">
     <link href="/web/styles/layout.css" rel="stylesheet">
     <link href="/web/styles/about.css" rel="stylesheet">
@@ -211,17 +212,21 @@
 
 <footer class="site-footer">
     <div class="wrap">
-        <section aria-labelledby="company-information-heading">
+        <section aria-labelledby="company-information-heading" class="site-footer__brand">
+            <span class="site-footer__logo"><img alt="Tatua" height="128" src="/assets/tatua-icon-white.png" width="128"></span>
             <h2 id="company-information-heading">Tatua Solutions Inc.</h2>
             <p class="site-footer__legal">&copy; 2025 Tatua Solutions Inc.</p>
         </section>
         <address>
-            <p><a href="mailto:hello@tatua.com">hello@tatua.com</a></p>
-            <p><a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+            <p><i aria-hidden="true" class="fa-solid fa-envelope"></i> <a href="mailto:hello@tatua.com">hello@tatua.com</a></p>
+            <p><i aria-hidden="true" class="fa-solid fa-phone"></i> <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+        </address>
+        <address>
             <p>
-                123 Innovation Drive,<br>
+                <i aria-hidden="true" class="fa-solid fa-location-dot"></i>
+                <span>123 Innovation Drive,<br>
                 Suite 400,<br>
-                San Francisco, CA 94105
+                San Francisco, CA 94105</span>
             </p>
         </address>
     </div>
