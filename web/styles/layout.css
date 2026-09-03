@@ -20,7 +20,7 @@
 }
 
 .page-banner::after {
-    background: rgba(221, 151, 7, 0.82);
+    background: rgba(151, 103, 4, 0.9);
     clip-path: polygon(100% 0, 100% 100%, 42% 100%, 68% 0);
 }
 

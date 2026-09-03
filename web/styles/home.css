@@ -28,7 +28,7 @@
 }
 
 .hero::after {
-    background: rgba(221, 151, 7, 0.82);
+    background: rgba(151, 103, 4, 0.9);
     clip-path: polygon(100% 0, 100% 100%, 42% 100%, 68% 0);
 }
 
@@ -44,19 +44,21 @@
 }
 
 @supports (animation-timeline: scroll()) {
-    .hero .wrap {
-        animation: hero-fade linear both;
-        animation-timeline: scroll(root block);
-        animation-range: 0 100vh;
-    }
-
-    @keyframes hero-fade {
-        from {
-            opacity: 1;
+    @media (prefers-reduced-motion: no-preference) {
+        .hero .wrap {
+            animation: hero-fade linear both;
+            animation-timeline: scroll(root block);
+            animation-range: 0 100vh;
         }
 
-        to {
-            opacity: 0;
+        @keyframes hero-fade {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+            }
         }
     }
 }
@@ -150,18 +152,21 @@
     margin-top: clamp(2rem, 5vw, 3rem);
 }
 
-.stats__list li {
+.stats__item {
     display: grid;
     gap: 0.35rem;
 }
 
 .stats__value {
+    order: 1;
+    margin: 0;
     color: var(--gold-dark);
     font-size: var(--fs-700);
     line-height: 1;
 }
 
 .stats__label {
+    order: 2;
     color: var(--slate);
     font-size: var(--fs-300);
     letter-spacing: 0.06em;
