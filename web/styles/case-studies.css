@@ -1,0 +1,327 @@
+.case-studies__section + .case-studies__section {
+    border-top: 1px solid var(--line);
+}
+
+.intro {
+    text-align: center;
+}
+
+.intro__subheading {
+    max-width: none;
+    margin-top: 0.5rem;
+    color: var(--purple-dark);
+    font-size: var(--fs-500);
+    font-weight: 600;
+}
+
+.intro__description {
+    max-width: 56rem;
+    margin: 1rem auto 0;
+    color: var(--slate);
+}
+
+.section-description {
+    max-width: none;
+    margin-top: 0.75rem;
+    color: var(--slate);
+    text-align: center;
+}
+
+/* Case studies */
+
+.case-study__list {
+    display: grid;
+    gap: clamp(1.5rem, 4vw, 2.5rem);
+    margin-top: clamp(2rem, 5vw, 3rem);
+}
+
+.case-study {
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+}
+
+.case-study__header {
+    padding-bottom: 1.25rem;
+    margin-bottom: 1.25rem;
+    border-bottom: 1px solid var(--line);
+}
+
+.case-study__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    margin-top: 0.75rem;
+}
+
+.case-study__meta div {
+    display: flex;
+    gap: 0.35rem;
+    font-size: var(--fs-300);
+}
+
+.case-study__meta dt {
+    color: var(--slate);
+    font-weight: 600;
+}
+
+.case-study__meta dd {
+    margin: 0;
+    color: var(--ink);
+}
+
+.case-study h4 {
+    margin-top: 1.5rem;
+    color: var(--purple-dark);
+    font-size: var(--fs-400);
+    font-weight: 700;
+}
+
+.case-study p {
+    margin-top: 0.5rem;
+    color: var(--slate);
+}
+
+.case-study__results {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+    gap: 1rem 1.5rem;
+    margin-top: 0.75rem;
+}
+
+.case-study__results div {
+    padding: 0.85rem 1rem;
+    background: var(--paper);
+    border-radius: var(--radius);
+}
+
+.case-study__results dt {
+    color: var(--slate);
+    font-size: var(--fs-300);
+    font-weight: 600;
+}
+
+.case-study__results dd {
+    margin: 0.25rem 0 0;
+    color: var(--ink);
+    font-size: var(--fs-300);
+}
+
+.case-study__quote {
+    margin: 1.75rem 0 0;
+}
+
+.case-study__quote::before {
+    content: "\201C";
+    display: block;
+    margin-bottom: -0.75rem;
+    color: var(--gold);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 4.5rem;
+    line-height: 1;
+}
+
+.case-study__quote p {
+    margin-top: 0;
+    color: var(--ink-soft);
+    font-size: var(--fs-500);
+    font-style: italic;
+}
+
+.case-study__quote p::after {
+    content: "\201D";
+    display: block;
+    margin-top: -0.75rem;
+    color: var(--gold);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 4.5rem;
+    font-style: normal;
+    line-height: 1;
+    text-align: right;
+}
+
+.case-study__quote footer {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    color: var(--slate);
+    font-size: var(--fs-300);
+}
+
+.case-study__quote cite {
+    color: var(--ink);
+    font-style: normal;
+    font-weight: 600;
+}
+
+.quote-avatar {
+    width: 3rem;
+    height: 3rem;
+    flex-shrink: 0;
+    object-fit: cover;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+}
+
+/* Tables */
+
+.table-intro {
+    max-width: 56rem;
+    margin: 0.75rem auto 0;
+    color: var(--slate);
+    font-size: var(--fs-300);
+    text-align: center;
+}
+
+.table-scroll {
+    margin-top: clamp(1.5rem, 4vw, 2.5rem);
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--fs-300);
+}
+
+caption {
+    margin-bottom: 1rem;
+    color: var(--purple-dark);
+    font-size: var(--fs-500);
+    font-weight: 600;
+    text-align: left;
+    caption-side: top;
+}
+
+thead th {
+    padding: 0.85rem 1rem;
+    background: var(--purple-dark);
+    color: #ffffff;
+    font-weight: 600;
+    text-align: left;
+    white-space: nowrap;
+}
+
+tbody th,
+tbody td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--line);
+    white-space: nowrap;
+}
+
+tbody th {
+    color: var(--ink);
+    font-weight: 600;
+    text-align: left;
+    background: var(--paper);
+}
+
+tbody td {
+    color: var(--slate);
+}
+
+tbody tr:nth-child(even) td {
+    background: var(--paper);
+}
+
+/* ROI */
+
+.roi-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(1rem, 3vw, 2rem);
+    margin-top: clamp(2rem, 5vw, 3rem);
+}
+
+@media (min-width: 50rem) {
+    .roi-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.roi-grid__item {
+    padding: clamp(1.25rem, 3vw, 1.75rem);
+    text-align: center;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+}
+
+.roi-grid dt {
+    color: var(--slate);
+    font-size: var(--fs-300);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.roi-grid dd {
+    margin: 0.5rem 0 0;
+    color: var(--gold-dark);
+    font-size: var(--fs-600);
+    font-weight: 700;
+}
+
+/* Testimonials */
+
+.testimonial__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: clamp(1rem, 3vw, 2rem);
+    margin-top: clamp(2rem, 5vw, 3rem);
+}
+
+.testimonial {
+    height: 100%;
+    padding: clamp(1.5rem, 3vw, 2rem);
+    margin: 0;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+}
+
+.testimonial::before {
+    content: "\201C";
+    display: block;
+    margin-bottom: -0.75rem;
+    color: var(--gold);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 4.5rem;
+    line-height: 1;
+}
+
+.testimonial p {
+    color: var(--ink-soft);
+    font-size: var(--fs-400);
+    font-style: italic;
+}
+
+.testimonial p::after {
+    content: "\201D";
+    display: block;
+    margin-top: -0.75rem;
+    color: var(--gold);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 4.5rem;
+    font-style: normal;
+    line-height: 1;
+    text-align: right;
+}
+
+.testimonial footer {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    color: var(--slate);
+    font-size: var(--fs-300);
+    border-top: 1px solid var(--line);
+}
+
+.testimonial cite {
+    color: var(--purple-dark);
+    font-style: normal;
+    font-weight: 600;
+}
