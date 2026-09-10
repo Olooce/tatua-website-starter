@@ -9,7 +9,7 @@
 .intro__subheading {
     max-width: none;
     margin-top: 0.5rem;
-    color: var(--purple-dark);
+    color: var(--heading);
     font-size: var(--fs-500);
     font-weight: 600;
 }
@@ -73,7 +73,7 @@
 
 .case-study h4 {
     margin-top: 1.5rem;
-    color: var(--purple-dark);
+    color: var(--heading);
     font-size: var(--fs-400);
     font-weight: 700;
 }
@@ -188,7 +188,7 @@ table {
 
 caption {
     margin-bottom: 1rem;
-    color: var(--purple-dark);
+    color: var(--heading);
     font-size: var(--fs-500);
     font-weight: 600;
     text-align: left;
@@ -321,7 +321,7 @@ tbody tr:nth-child(even) td {
 }
 
 .testimonial cite {
-    color: var(--purple-dark);
+    color: var(--heading);
     font-style: normal;
     font-weight: 600;
 }

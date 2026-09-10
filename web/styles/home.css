@@ -23,12 +23,12 @@
 }
 
 .hero::before {
-    background: rgba(98, 71, 136, 0.88);
+    background: rgba(var(--hero-accent-rgb), 0.88);
     clip-path: polygon(0 0, 58% 0, 32% 100%, 0 100%);
 }
 
 .hero::after {
-    background: rgba(151, 103, 4, 0.9);
+    background: rgba(var(--hero-accent-2-rgb), 0.9);
     clip-path: polygon(100% 0, 100% 100%, 42% 100%, 68% 0);
 }
 
@@ -64,7 +64,7 @@
 }
 
 .hero h1 {
-    color: #ffffff;
+    color: var(--hero-heading);
 }
 
 .hero__lede {
@@ -84,7 +84,7 @@
 }
 
 .hero .btn--secondary:hover {
-    color: var(--ink);
+    color: var(--on-accent);
 }
 
 .hero__actions {

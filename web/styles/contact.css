@@ -46,7 +46,7 @@
     margin-bottom: 1rem;
     border-radius: 50%;
     background: var(--paper);
-    color: var(--purple);
+    color: var(--heading);
     font-size: 1.1rem;
 }
 
@@ -135,7 +135,7 @@
 
 .contact-form legend {
     padding-inline: 0.5rem;
-    color: var(--purple-dark);
+    color: var(--heading);
     font-size: var(--fs-500);
     font-weight: 600;
 }
@@ -327,11 +327,11 @@
 .quick-action--secondary {
     background: var(--surface);
     border-color: var(--gold);
-    color: var(--purple);
+    color: var(--heading);
 }
 
 .quick-action--secondary h3 {
-    color: var(--purple-dark);
+    color: var(--heading);
 }
 
 .quick-action--secondary p {
@@ -344,5 +344,5 @@
 
 .quick-action--secondary:hover h3,
 .quick-action--secondary:hover p {
-    color: var(--ink);
+    color: var(--on-accent);
 }

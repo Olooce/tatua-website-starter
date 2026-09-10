@@ -15,12 +15,12 @@
 }
 
 .page-banner::before {
-    background: rgba(98, 71, 136, 0.88);
+    background: rgba(var(--hero-accent-rgb), 0.88);
     clip-path: polygon(0 0, 58% 0, 32% 100%, 0 100%);
 }
 
 .page-banner::after {
-    background: rgba(151, 103, 4, 0.9);
+    background: rgba(var(--hero-accent-2-rgb), 0.9);
     clip-path: polygon(100% 0, 100% 100%, 42% 100%, 68% 0);
 }
 
@@ -32,7 +32,7 @@
 }
 
 .page-banner h1 {
-    color: #ffffff;
+    color: var(--hero-heading);
 }
 
 .page-banner__lede {
@@ -131,7 +131,7 @@
     display: inline-block;
     padding-block: 0.25rem;
     border-bottom: 2px solid transparent;
-    color: var(--purple-dark);
+    color: var(--heading);
     font-size: var(--fs-300);
     font-weight: 500;
     text-decoration: none;
@@ -144,7 +144,7 @@
 }
 
 .site-nav a[aria-current="page"] {
-    color: var(--purple-dark);
+    color: var(--heading);
     font-weight: 600;
     border-bottom-color: var(--gold-dark);
 }
