@@ -10,6 +10,14 @@
     text-align-last: left;
 }
 
+.team__hint {
+    max-width: none;
+    margin-top: 0.75rem;
+    color: var(--slate);
+    font-size: var(--fs-300);
+    text-align: center;
+}
+
 .team__list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
@@ -33,6 +41,7 @@
 }
 
 .team-member__photo {
+    display: block;
     width: 6rem;
     height: 6rem;
     margin: 0 auto 1rem;
@@ -41,23 +50,113 @@
     object-fit: cover;
 }
 
-.team-member__facts {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 0.35rem 0.75rem;
-    margin-top: 1rem;
-    text-align: left;
-    font-size: var(--fs-300);
+.team-member__trigger {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: inherit;
+    text-decoration: none;
 }
 
-.team-member__facts dt {
+.team-member__trigger:hover .team-member__photo {
+    border-color: var(--purple);
+}
+
+.team-member__trigger:hover .team-member__name {
+    color: var(--purple);
+}
+
+.team-member__name {
+    display: block;
+    color: var(--heading);
+    font-size: var(--fs-600);
+    font-weight: 600;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    transition: color 120ms ease;
+}
+
+.team-member__title {
+    display: block;
+    margin-top: 0.35rem;
     color: var(--slate);
+    font-size: var(--fs-300);
     font-weight: 600;
 }
 
-.team-member__facts dd {
+/* Team member detail dialog: shown via the CSS :target selector, triggered
+   by the fragment link in .team-member__trigger — no script required. */
+
+.team-member__dialog {
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: var(--gutter);
     margin: 0;
+    max-width: none;
+    max-height: none;
+    background: rgba(0, 0, 0, 0.55);
+    border: 0;
+}
+
+.team-member__dialog:target {
+    display: flex;
+}
+
+.team-member__dialog-panel {
+    position: relative;
+    width: min(28rem, 100%);
+    max-height: min(34rem, calc(100vh - 2 * var(--gutter)));
+    overflow-y: auto;
+    padding: clamp(1.5rem, 4vw, 2rem);
+    text-align: left;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.35);
+}
+
+.team-member__dialog-header {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.team-member__dialog-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid transparent;
+    border-radius: var(--radius);
+    color: var(--slate);
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.team-member__dialog-close:hover {
+    color: var(--heading);
+    border-color: var(--line);
+}
+
+.team-member__detail {
+    margin-top: 1rem;
     color: var(--ink);
+    font-size: var(--fs-300);
+}
+
+.team-member__contact {
+    margin-top: 0.5rem;
+    color: var(--slate);
+    font-size: var(--fs-300);
 }
 
 .team-member__bio {

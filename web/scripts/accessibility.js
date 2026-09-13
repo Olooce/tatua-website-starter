@@ -4,7 +4,7 @@
     const STORAGE_KEY = "tatua-a11y-settings";
 
     const THEMES = [
-        {value: "default", label: "Default"},
+        {value: "default", label: "Light"},
         {value: "dark", label: "Dark"},
         {value: "contrast", label: "High contrast"}
     ];

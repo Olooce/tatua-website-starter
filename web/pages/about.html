@@ -41,21 +41,21 @@
     </div>
 </header>
 
-<section class="page-banner">
-    <div class="wrap page-banner__inner">
-        <h1>About Us</h1>
-        <p class="page-banner__lede">Learn about Tatua's mission to eliminate support chaos and meet our team of
-            enterprise support experts.</p>
-        <nav aria-label="Breadcrumb" class="breadcrumb">
-            <ol>
-                <li><a href="/index.html">Home</a></li>
-                <li aria-current="page">About</li>
-            </ol>
-        </nav>
-    </div>
-</section>
-
 <main id="main">
+    <section class="page-banner">
+        <div class="wrap page-banner__inner">
+            <h1>About Us</h1>
+            <p class="page-banner__lede">Learn about Tatua's mission to eliminate support chaos and meet our team of
+                enterprise support experts.</p>
+            <nav aria-label="Breadcrumb" class="breadcrumb">
+                <ol>
+                    <li><a href="/index.html">Home</a></li>
+                    <li aria-current="page">About</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
     <section aria-labelledby="story-heading" class="section about__section">
         <div class="wrap about__body">
             <h2 id="story-heading">Our Story</h2>
@@ -79,81 +79,134 @@
     <section aria-labelledby="team-heading" class="section about__section">
         <div class="wrap">
             <h2 id="team-heading">Meet Our Team</h2>
+            <p class="team__hint">Select a team member's photo, name, or title to read their full bio.</p>
             <ul class="team__list">
                 <li>
                     <article class="team-member">
-                        <img alt="Portrait of Sarah Chen" class="team-member__photo"
-                             src="https://randomuser.me/api/portraits/women/65.jpg">
-                        <h3>Sarah Chen</h3>
-                        <dl class="team-member__facts">
-                            <dt>Title</dt>
-                            <dd>CEO &amp; Co-founder</dd>
-                            <dt>Background</dt>
-                            <dd>Former Head of Support at TechCorp</dd>
-                            <dt>Experience</dt>
-                            <dd>10+ years in customer success</dd>
-                            <dt>Email</dt>
-                            <dd><a href="mailto:sarah@tatua.com">sarah@tatua.com</a></dd>
-                        </dl>
-                        <p class="team-member__bio">Sarah led support teams of 50+ agents and understands the
-                            challenges of scaling customer service operations.</p>
+                        <a aria-controls="team-member-1-dialog" aria-haspopup="dialog" class="team-member__trigger"
+                           href="#team-member-1-dialog">
+                            <img alt="Portrait of Sarah Chen" class="team-member__photo"
+                                 src="https://randomuser.me/api/portraits/women/65.jpg">
+                            <h3 class="team-member__name" id="team-member-1-name">Sarah Chen</h3>
+                            <p class="team-member__title">CEO &amp; Co-founder</p>
+                        </a>
+
+                        <dialog aria-labelledby="team-member-1-name" aria-modal="true"
+                                class="team-member__dialog" id="team-member-1-dialog" tabindex="-1">
+                            <div class="team-member__dialog-panel">
+                                <a aria-label="Close" class="team-member__dialog-close" href="#_closed">
+                                    <i aria-hidden="true" class="fa-solid fa-xmark"></i>
+                                </a>
+                                <div class="team-member__dialog-header">
+                                    <img alt="Portrait of Sarah Chen" class="team-member__photo"
+                                         src="https://randomuser.me/api/portraits/women/65.jpg">
+                                    <h3 class="team-member__name">Sarah Chen</h3>
+                                    <p class="team-member__title">CEO &amp; Co-founder</p>
+                                </div>
+                                <p class="team-member__detail">Former Head of Support at TechCorp, with 10+
+                                    years of experience in customer success.</p>
+                                <p class="team-member__contact">Reach Sarah at
+                                    <a href="mailto:sarah@tatua.com">sarah@tatua.com</a>.</p>
+                                <p class="team-member__bio">Sarah led support teams of 50+ agents and understands
+                                    the challenges of scaling customer service operations.</p>
+                            </div>
+                        </dialog>
                     </article>
                 </li>
                 <li>
                     <article class="team-member">
-                        <img alt="Portrait of Marcus Rodriguez" class="team-member__photo"
-                             src="https://randomuser.me/api/portraits/men/32.jpg">
-                        <h3>Marcus Rodriguez</h3>
-                        <dl class="team-member__facts">
-                            <dt>Title</dt>
-                            <dd>CTO &amp; Co-founder</dd>
-                            <dt>Background</dt>
-                            <dd>Ex-Senior Engineer at CloudScale</dd>
-                            <dt>Experience</dt>
-                            <dd>Expert in distributed systems</dd>
-                            <dt>Email</dt>
-                            <dd><a href="mailto:marcus@tatua.com">marcus@tatua.com</a></dd>
-                        </dl>
-                        <p class="team-member__bio">Marcus built high-performance systems serving millions of
-                            users and brings that expertise to support infrastructure.</p>
+                        <a aria-controls="team-member-2-dialog" aria-haspopup="dialog" class="team-member__trigger"
+                           href="#team-member-2-dialog">
+                            <img alt="Portrait of Marcus Rodriguez" class="team-member__photo"
+                                 src="https://randomuser.me/api/portraits/men/32.jpg">
+                            <h3 class="team-member__name" id="team-member-2-name">Marcus Rodriguez</h3>
+                            <p class="team-member__title">CTO &amp; Co-founder</p>
+                        </a>
+
+                        <dialog aria-labelledby="team-member-2-name" aria-modal="true"
+                                class="team-member__dialog" id="team-member-2-dialog" tabindex="-1">
+                            <div class="team-member__dialog-panel">
+                                <a aria-label="Close" class="team-member__dialog-close" href="#_closed">
+                                    <i aria-hidden="true" class="fa-solid fa-xmark"></i>
+                                </a>
+                                <div class="team-member__dialog-header">
+                                    <img alt="Portrait of Marcus Rodriguez" class="team-member__photo"
+                                         src="https://randomuser.me/api/portraits/men/32.jpg">
+                                    <h3 class="team-member__name">Marcus Rodriguez</h3>
+                                    <p class="team-member__title">CTO &amp; Co-founder</p>
+                                </div>
+                                <p class="team-member__detail">Ex-Senior Engineer at CloudScale and an expert in
+                                    distributed systems.</p>
+                                <p class="team-member__contact">Reach Marcus at
+                                    <a href="mailto:marcus@tatua.com">marcus@tatua.com</a>.</p>
+                                <p class="team-member__bio">Marcus built high-performance systems serving millions
+                                    of users and brings that expertise to support infrastructure.</p>
+                            </div>
+                        </dialog>
                     </article>
                 </li>
                 <li>
                     <article class="team-member">
-                        <img alt="Portrait of Jennifer Park" class="team-member__photo"
-                             src="https://randomuser.me/api/portraits/women/44.jpg">
-                        <h3>Jennifer Park</h3>
-                        <dl class="team-member__facts">
-                            <dt>Title</dt>
-                            <dd>Head of Product</dd>
-                            <dt>Background</dt>
-                            <dd>Former Product Manager at SupportFlow</dd>
-                            <dt>Experience</dt>
-                            <dd>Specialist in UX design</dd>
-                            <dt>Email</dt>
-                            <dd><a href="mailto:jennifer@tatua.com">jennifer@tatua.com</a></dd>
-                        </dl>
-                        <p class="team-member__bio">Jennifer designed user experiences for complex enterprise
-                            software and focuses on making support tools intuitive.</p>
+                        <a aria-controls="team-member-3-dialog" aria-haspopup="dialog" class="team-member__trigger"
+                           href="#team-member-3-dialog">
+                            <img alt="Portrait of Jennifer Park" class="team-member__photo"
+                                 src="https://randomuser.me/api/portraits/women/44.jpg">
+                            <h3 class="team-member__name" id="team-member-3-name">Jennifer Park</h3>
+                            <p class="team-member__title">Head of Product</p>
+                        </a>
+
+                        <dialog aria-labelledby="team-member-3-name" aria-modal="true"
+                                class="team-member__dialog" id="team-member-3-dialog" tabindex="-1">
+                            <div class="team-member__dialog-panel">
+                                <a aria-label="Close" class="team-member__dialog-close" href="#_closed">
+                                    <i aria-hidden="true" class="fa-solid fa-xmark"></i>
+                                </a>
+                                <div class="team-member__dialog-header">
+                                    <img alt="Portrait of Jennifer Park" class="team-member__photo"
+                                         src="https://randomuser.me/api/portraits/women/44.jpg">
+                                    <h3 class="team-member__name">Jennifer Park</h3>
+                                    <p class="team-member__title">Head of Product</p>
+                                </div>
+                                <p class="team-member__detail">Former Product Manager at SupportFlow, specializing
+                                    in UX design.</p>
+                                <p class="team-member__contact">Reach Jennifer at
+                                    <a href="mailto:jennifer@tatua.com">jennifer@tatua.com</a>.</p>
+                                <p class="team-member__bio">Jennifer designed user experiences for complex
+                                    enterprise software and focuses on making support tools intuitive.</p>
+                            </div>
+                        </dialog>
                     </article>
                 </li>
                 <li>
                     <article class="team-member">
-                        <img alt="Portrait of David Kim" class="team-member__photo"
-                             src="https://randomuser.me/api/portraits/men/75.jpg">
-                        <h3>David Kim</h3>
-                        <dl class="team-member__facts">
-                            <dt>Title</dt>
-                            <dd>Lead Developer</dd>
-                            <dt>Background</dt>
-                            <dd>Full-stack engineer, 8 years experience</dd>
-                            <dt>Experience</dt>
-                            <dd>Open source contributor</dd>
-                            <dt>Email</dt>
-                            <dd><a href="mailto:david@tatua.com">david@tatua.com</a></dd>
-                        </dl>
-                        <p class="team-member__bio">David contributes to major open source projects and ensures
-                            our platform follows industry best practices.</p>
+                        <a aria-controls="team-member-4-dialog" aria-haspopup="dialog" class="team-member__trigger"
+                           href="#team-member-4-dialog">
+                            <img alt="Portrait of David Kim" class="team-member__photo"
+                                 src="https://randomuser.me/api/portraits/men/75.jpg">
+                            <h3 class="team-member__name" id="team-member-4-name">David Kim</h3>
+                            <p class="team-member__title">Lead Developer</p>
+                        </a>
+
+                        <dialog aria-labelledby="team-member-4-name" aria-modal="true"
+                                class="team-member__dialog" id="team-member-4-dialog" tabindex="-1">
+                            <div class="team-member__dialog-panel">
+                                <a aria-label="Close" class="team-member__dialog-close" href="#_closed">
+                                    <i aria-hidden="true" class="fa-solid fa-xmark"></i>
+                                </a>
+                                <div class="team-member__dialog-header">
+                                    <img alt="Portrait of David Kim" class="team-member__photo"
+                                         src="https://randomuser.me/api/portraits/men/75.jpg">
+                                    <h3 class="team-member__name">David Kim</h3>
+                                    <p class="team-member__title">Lead Developer</p>
+                                </div>
+                                <p class="team-member__detail">Full-stack engineer with 8 years of experience and
+                                    an active open source contributor.</p>
+                                <p class="team-member__contact">Reach David at
+                                    <a href="mailto:david@tatua.com">david@tatua.com</a>.</p>
+                                <p class="team-member__bio">David contributes to major open source projects and
+                                    ensures our platform follows industry best practices.</p>
+                            </div>
+                        </dialog>
                     </article>
                 </li>
             </ul>

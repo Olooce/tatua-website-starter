@@ -2,6 +2,78 @@
     border-top: 1px solid var(--line);
 }
 
+/* Layout: sidebar table of contents + content column */
+
+.case-studies-layout {
+    display: grid;
+    gap: clamp(1.5rem, 4vw, 2.5rem);
+    align-items: start;
+}
+
+@media (min-width: 72rem) {
+    .case-studies-layout {
+        grid-template-columns: 14rem minmax(0, 1fr);
+    }
+}
+
+.case-studies-content {
+    min-width: 0;
+}
+
+/* Table of contents */
+
+.page-toc {
+    padding: 1.25rem 1.5rem;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+}
+
+@media (min-width: 72rem) {
+    .page-toc {
+        position: sticky;
+        top: 5.5rem;
+    }
+}
+
+.page-toc__heading {
+    color: var(--heading);
+    font-size: var(--fs-400);
+    font-weight: 700;
+}
+
+.page-toc__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    margin-top: 0.85rem;
+    font-size: var(--fs-300);
+}
+
+.page-toc__list a {
+    color: var(--slate);
+    text-decoration-color: var(--line);
+    text-underline-offset: 0.2em;
+}
+
+.page-toc__list a:hover {
+    color: var(--heading);
+    text-decoration-color: var(--gold);
+}
+
+.page-toc__sublist {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    padding-left: 0.85rem;
+    border-left: 1px solid var(--line);
+}
+
+.page-toc__sublist a {
+    font-size: var(--fs-300);
+}
+
 .intro {
     text-align: center;
 }
@@ -235,7 +307,7 @@ tbody tr:nth-child(even) td {
     margin-top: clamp(2rem, 5vw, 3rem);
 }
 
-@media (min-width: 50rem) {
+@media (min-width: 48rem) {
     .roi-grid {
         grid-template-columns: repeat(4, 1fr);
     }
@@ -267,9 +339,15 @@ tbody tr:nth-child(even) td {
 
 .testimonial__list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    grid-template-columns: 1fr;
     gap: clamp(1rem, 3vw, 2rem);
     margin-top: clamp(2rem, 5vw, 3rem);
+}
+
+@media (min-width: 56rem) {
+    .testimonial__list {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 .testimonial {
