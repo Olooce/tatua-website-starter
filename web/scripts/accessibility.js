@@ -10,21 +10,9 @@
     ];
 
     const FONTS = [
-        {
-            value: "asap",
-            label: "Asap",
-            stack: "\"Asap\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif"
-        },
-        {
-            value: "lexend",
-            label: "Lexend Deca",
-            stack: "\"Lexend Deca\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif"
-        },
-        {
-            value: "inter",
-            label: "Inter",
-            stack: "\"Inter\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif"
-        }
+        { value: "asap",   label: "Asap",        cssVar: "--font-asap" },
+        { value: "lexend", label: "Lexend Deca", cssVar: "--font-lexend" },
+        { value: "inter",  label: "Inter",       cssVar: "--font-inter" }
     ];
 
     const DEFAULTS = {theme: "default", fontSize: 100, radius: 4, font: "asap"};
@@ -34,12 +22,17 @@
     const RADIUS_MIN = 0;
     const RADIUS_MAX = 20;
 
-    function fontStack(key) {
-        for (let i = 0; i < FONTS.length; i++) {
-            if (FONTS[i].value === key) return FONTS[i].stack;
-        }
-        return FONTS[0].stack;
+    function fontVar(key) {
+        const f = FONTS.find(f => f.value === key) || FONTS[0];
+        return "var(" + f.cssVar + ")";
     }
+
+    // function fontStack(key) {
+    //     for (let i = 0; i < FONTS.length; i++) {
+    //         if (FONTS[i].value === key) return FONTS[i].stack;
+    //     }
+    //     return FONTS[0].stack;
+    // }
 
     function loadSettings() {
         const settings = {};
@@ -77,7 +70,7 @@
 
         html.style.fontSize = settings.fontSize + "%";
         html.style.setProperty("--radius", settings.radius + "px");
-        html.style.setProperty("--font-family-base", fontStack(settings.font));
+        html.style.setProperty("--font-family-base", fontVar(settings.font));
     }
 
     let settings = loadSettings();

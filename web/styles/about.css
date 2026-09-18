@@ -84,9 +84,6 @@
     font-weight: 600;
 }
 
-/* Team member detail dialog: shown via the CSS :target selector, triggered
-   by the fragment link in .team-member__trigger — no script required. */
-
 .team-member__dialog {
     position: fixed;
     inset: 0;
